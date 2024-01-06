@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *
+ * @package    Sprinix_PurchaseOrderExt
+ * @author     RajShukla1
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!--Sync the sales_order table and sales_order_grid-->
+    <virtualType name="Magento\Sales\Model\ResourceModel\Order\Grid" type="Magento\Sales\Model\ResourceModel\Grid">
+        <arguments>
+            <argument name="columns" xsi:type="array">
+                <item name="purchase_order_no" xsi:type="string">sales_order.purchase_order_no</item>
+            </argument>
+        </arguments>
+    </virtualType>
+</config>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *
+ * @package    Sprinix_PurchaseOrderExt
+ * @author     RajShukla1
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="sales_model_service_quote_submit_before">
+        <observer name="sprinix_purchaseorderext_save_purchase_order_no" instance="Sprinix\PurchaseOrderExt\Observer\SavePurchaseOrderNo"/>
+    </event>
+</config>
